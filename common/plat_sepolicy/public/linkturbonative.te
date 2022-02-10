@@ -1,0 +1,13 @@
+type linkturbonative, domain;
+type linkturbonative_exec, exec_type, system_file_type, file_type;
+allow linkturbonative linkturbonative_service:service_manager {add find};
+allow linkturbonative servicemanager:binder { call transfer };
+#allow linkturbonative linkturbonative:capability { dac_override  dac_read_search };
+allow linkturbonative shell_exec:file { execute read open execute_no_trans map getattr};
+allow linkturbonative linkturbonative:capability { setuid };
+allow linkturbonative linkturbonative:icmp_socket { create };
+allow linkturbonative linkturbonative:rawip_socket { create };
+allow linkturbonative linkturbonative:udp_socket { create };
+allow linkturbonative dnsproxyd_socket:sock_file { write };
+allow linkturbonative system_file:file { execute_no_trans lock };
+allow linkturbonative linkturbonative:capability { net_raw };

@@ -1,0 +1,4 @@
+typeattribute linkturbonative coredomain;
+typeattribute linkturbonative netdomain;
+typeattribute linkturbonative binderservicedomain;
+init_daemon_domain(linkturbonative)
